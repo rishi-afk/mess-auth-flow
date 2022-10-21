@@ -10,6 +10,6 @@ Execute [`next`](https://nextjs.org/docs/api-reference/cli) with [Yarn](https://
 yarn dev
 ```
 
-### View Live
+## View Live
 
 Go to [`app`]()

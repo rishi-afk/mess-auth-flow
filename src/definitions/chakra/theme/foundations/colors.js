@@ -1,0 +1,25 @@
+export default {
+    brand: {
+        black100: "#121212",
+        black200: "#2A2A2A",
+        black300: "#333333",
+        white: "#FBFEFB",
+        gray: "#D5D5D5",
+        lightGray: "#F8F8F8",
+        darkGray: "#666666",
+        almond: "#C59968",
+        error: "#FF5454",
+        errorBorder: "#FFC1C1",
+        errorBackground: "#FEE0E0",
+    },
+    almond: {
+        100: "#f8f3ed",
+        200: "#eadac8",
+        300: "#dcc1a3",
+        400: "#cda87e",
+        500: "#bf8f59",
+        600: "#a67540",
+        700: "#815b32",
+        800: "#5c4123",
+    },
+};

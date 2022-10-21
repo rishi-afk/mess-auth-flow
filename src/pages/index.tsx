@@ -1,56 +1,37 @@
 import {
-  Link as ChakraLink,
-  Text,
-  Code,
-  List,
-  ListIcon,
-  ListItem,
-} from '@chakra-ui/react'
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
+    Box,
+    Container,
+    Flex,
+    GridItem,
+    Heading,
+    useBreakpointValue,
+} from "@chakra-ui/react";
+import Head from "next/head";
+import React from "react";
+import useUser from "../../lib/hooks/use-user";
+import { DarkModeSwitch } from "../components/DarkModeSwitch";
+import { Hero } from "../components/Hero";
+import Navigation from "../components/Navigation";
 
-import { Hero } from '../components/Hero'
-import { Container } from '../components/Container'
-import { Main } from '../components/Main'
-import { DarkModeSwitch } from '../components/DarkModeSwitch'
-import { CTA } from '../components/CTA'
-import { Footer } from '../components/Footer'
+const Dashboard = () => {
+    const variant = useBreakpointValue({ base: "MOBILE", lg: "DESKTOP" }) as
+        | "MOBILE"
+        | "DESKTOP";
+    const { user } = useUser();
+    return (
+        <>
+            <Head>
+                <title>Dashboard | Mess @ NITT</title>
+            </Head>
+            <Box w="full" _dark={{ bgColor: "brand.black100" }}>
+                <Navigation variant={variant} />
+                <Hero
+                    text={`Welcome, ${user.name || user.email.split("@")[0]}!`}
+                />
+                <DarkModeSwitch />
+            </Box>
+        </>
+    );
+};
 
-const Index = () => (
-  <Container height="100vh">
-    <Hero />
-    <Main>
-      <Text color="text">
-        Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{' '}
-        <Code>TypeScript</Code>.
-      </Text>
-
-      <List spacing={3} my={0} color="text">
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink
-            isExternal
-            href="https://chakra-ui.com"
-            flexGrow={1}
-            mr={2}
-          >
-            Chakra UI <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink isExternal href="https://nextjs.org" flexGrow={1} mr={2}>
-            Next.js <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-      </List>
-    </Main>
-
-    <DarkModeSwitch />
-    <Footer>
-      <Text>Next ❤️ Chakra</Text>
-    </Footer>
-    <CTA />
-  </Container>
-)
-
-export default Index
+export default Dashboard;

@@ -2,10 +2,18 @@
 
 This app is built for OSOC Inductions 2022 @ NITT and features [chakra-ui](https://github.com/chakra-ui/chakra-ui) as the component library within a Next.js app with TypeScript.
 
-## How to use
+## How to use (Yarn)
 
 ```bash
 yarn
 yarn migrate
 yarn dev
+```
+
+## How to use (NPM)
+
+```bash
+npm i
+npm run migrate
+npm run dev
 ```

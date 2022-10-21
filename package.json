@@ -4,7 +4,7 @@
         "dev": "next",
         "start": "next start",
         "build": "next build",
-        "vercel-build": "prisma generate && prisma migrate deploy && next build"
+        "migrate": "prisma migrate dev && prisma generate"
     },
     "dependencies": {
         "@chakra-ui/icons": "^2.0.2",

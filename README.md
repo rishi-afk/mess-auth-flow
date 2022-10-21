@@ -4,12 +4,8 @@ This app is built for OSOC Inductions 2022 @ NITT and features [chakra-ui](https
 
 ## How to use
 
-Execute [`next`](https://nextjs.org/docs/api-reference/cli) with [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to start:
-
 ```bash
+yarn
+yarn migrate
 yarn dev
 ```
-
-## View Live
-
-Go to [`app`]()
